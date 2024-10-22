@@ -1,0 +1,50 @@
+body {
+  margin: 0px;
+  text-align: center;
+  height: 100vh;
+  direction: rtl;
+}
+
+.Header-Comp-Parent {
+  width: 100%;
+  height: 120px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+.Header-Comp-Parent-TopPart {
+  width: 100%;
+  height: 65%;
+  background-color: #555;
+  display: flex;
+  justify-content: space-around;
+  #Header-Comp-Parent-TopPart-right {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+  }
+  #Header-Comp-Parent-TopPart-left {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+}
+.Header-Comp-Parent-TopPart-Parts {
+  height: 100%;
+
+  // justify-content: flex-start;
+
+  .Header-Comp-Parent-TopPart-right-logoIMG {
+    width: 18%;
+    height: auto;
+    align-self: center;
+  }
+}
+.SearchBar-Comp-Parent {
+  width: 60%;
+  height: 70%;
+  align-self: center;
+  background-color: #999;
+  border-radius: 15px;
+}

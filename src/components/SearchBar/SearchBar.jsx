@@ -1,7 +1,5 @@
 const SearchBar = () => {
-  return <div className="SearchBar-Comp-Parent">
-    
-  </div>;
+  return <div className="SearchBar-Comp-Parent"></div>;
 };
 
 export default SearchBar;

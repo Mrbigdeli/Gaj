@@ -1,8 +1,9 @@
 // import { useState } from "react";
-import Header from "./components/Header/header";
+// import Header from "./components/Header/header";
+import Home from "./pages/home/home";
 
 function App() {
-  return <Header />;
+  return <Home />;
 }
 
 export default App;

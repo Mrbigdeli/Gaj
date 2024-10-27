@@ -1,10 +1,12 @@
 @import "animation";
+@import "font";
 
 body {
   margin: 0px;
   text-align: center;
   height: 100vh;
   direction: rtl;
+  font-family: "iranYekan";
 }
 
 .Header-Comp-Parent {
@@ -35,8 +37,6 @@ body {
 .Header-Comp-Parent-TopPart-Parts {
   height: 100%;
 
-  // justify-content: flex-start;
-
   .Header-Comp-Parent-TopPart-right-logoIMG {
     width: 18%;
     height: auto;
@@ -49,4 +49,40 @@ body {
   align-self: center;
   background-color: #999;
   border-radius: 15px;
+}
+.Home-Pge-MainDIV {
+  width: 1500px;
+  height: 1000px;
+  background-color: antiquewhite;
+  margin: 0px auto 0px;
+}
+.Home-Pge-MainDIV-StoryParent {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+// .Story-Comp {
+//   width: 70%;
+//   display: flex;
+//   gap: 30px;
+//   margin: 0px auto 0px;
+//   justify-content: center;
+// }
+.Story-Comp-IMG {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid red;
+  padding: 3px;
+}
+
+.Story-Comp-IMG:hover {
+  animation: borderConverter 3s linear infinite;
+}
+.Story-Comp-h5 {
+  margin-top: 3px;
+}
+.default-nav:last-of-type,
+.default-nav:first-of-type {
+  display: none !important;
 }

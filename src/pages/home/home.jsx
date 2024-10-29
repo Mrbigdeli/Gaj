@@ -1,5 +1,6 @@
 import Story from "../../components/Story/story";
 import Slider from "../../components/Slider/slider";
+import MostProductSales from "../../components/mostSalesProduct/MSProduct";
 // import StorySecondType from "../../components/Story/story-typeTwo";
 const Home = () => {
   return (
@@ -46,7 +47,12 @@ const Home = () => {
         srcThree="https://babkala.shop/wp-content/uploads/slide-4.webp"
         altThree="slider3"
       />
-
+      <div className="Home-Pge-MainDIV-product">
+        <div className="Home-Pge-MainDIV-product-title">
+          <h3>تخفیف‌های باورنکردنی باکالا</h3>
+        </div>
+        <MostProductSales />
+      </div>
       {/* <StorySecondType
         src="https://babkala.shop/wp-content/uploads/story-1.jpg"
         alt="هودی"

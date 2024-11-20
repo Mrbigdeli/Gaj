@@ -1,5 +1,12 @@
 const SearchBar = () => {
-  return <div className="SearchBar-Comp-Parent"></div>;
+  return (
+    <input
+      className="searchBar-input"
+      type="search"
+      placeholder="جست و جو برای محصولات..."      
+    />
+    // <div className="SearchBar-Comp-Parent"></div>
+  );
 };
 
 export default SearchBar;

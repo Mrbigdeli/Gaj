@@ -1,14 +1,14 @@
-import { borderRadius, margin, width } from "@mui/system";
+// import { borderRadius, margin, width } from "@mui/system";
 import { Slide } from "react-slideshow-image";
 
 const Slider = (props) => {
   const divStyle = {
     display: "flex",
-    width: "90%",
+    width: "100%",
     alignItems: "center",
     justifyContent: "center",
     backgroundSize: "cover",
-    height: "400px",
+    height: "80vh",
     borderRadius: "25px",
     margin: "0px auto 0px",
   };

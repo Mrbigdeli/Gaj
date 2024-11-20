@@ -1,5 +1,9 @@
 @import "animation";
 @import "font";
+@import "Variable";
+@import "../../index.css";
+@import "../../../node_modules/react-slideshow-image/dist/styles.css";
+@import "../../../node_modules/react-multi-carousel/lib/styles.css";
 
 body {
   margin: 0px;
@@ -12,27 +16,115 @@ body {
 .Header-Comp-Parent {
   width: 100%;
   height: 120px;
-  background-color: black;
+  background-color: #262626;
   color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
+
 .Header-Comp-Parent-TopPart {
   width: 100%;
   height: 65%;
-  background-color: #555;
+  // background-color: #000000;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   #Header-Comp-Parent-TopPart-right {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 60%;
   }
   #Header-Comp-Parent-TopPart-left {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    column-gap: 10%;
     width: 30%;
   }
+}
+.Header-Comp-Parent-bottomPart {
+  width: 100%;
+  height: 35%;
+  // background-color: #838383;
+  display: flex;
+  justify-content: stretch;
+  flex-direction: row;
+}
+.Header-Comp-Parent-bottomPart-right {
+  width: 50%;
+  height: 100%;
+  // background-color: #999;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.Header-Comp-Parent-bottomPart-right-items:hover {
+  cursor: pointer;
+  background-color: #838383;
+}
+.Header-Comp-Parent-category-box {
+  width: 100%;
+  height: 10px;
+  background-color: gold;
+  // display: none;
+}
+.Header-Comp-Parent-bottomPart-left {
+  width: 50%;
+  height: 100%;
+}
+
+.Header-Comp-TopPart-itm {
+  background-color: #d9d9d921;
+  height: 60%;
+  margin: 11px 0px;
+  border-radius: 15px;
+}
+.Header-Comp-TopPart-itm-one {
+  background-color: #d9d9d921;
+  height: 60%;
+  margin: 11px 0px;
+  border-radius: 15px;
+}
+.Header-Comp-TopPart-itm-one:hover {
+  background-color: #d9d9d956;
+  transition: 350ms;
+  cursor: pointer;
+}
+.Header-Comp-TopPart-itm-two {
+  background-color: #d9d9d921;
+  height: 60%;
+  margin: 11px 0px;
+  border-radius: 15px;
+}
+.Header-Comp-TopPart-itm-two:hover {
+  background-color: #d9d9d956;
+  transition: 350ms;
+  cursor: pointer;
+}
+.Header-Comp-TopPart-itm:hover {
+  background-color: #d9d9d956;
+  transition: 350ms;
+  cursor: pointer;
+}
+.Header-Comp-TopPart-h4 {
+  margin: 0px;
+  padding: 10px;
+}
+.Header-Comp-TopPart-h4-one {
+  margin: 0px;
+  padding: 10px;
+  color: white;
+  background-color: transparent;
+  border-radius: 15px;
+  font-family: "iranYekan";
+}
+.Header-Comp-TopPart-h4-two {
+  margin: 0px;
+  padding: 10px;
+  color: white;
+  background-color: transparent;
+  border-radius: 15px;
+  font-family: "iranYekan";
 }
 .Header-Comp-Parent-TopPart-Parts {
   height: 100%;
@@ -43,6 +135,11 @@ body {
     align-self: center;
   }
 }
+
+.Header-Comp-TopPart-icn {
+  font-size: 20px;
+  padding: 0px 5px;
+}
 .SearchBar-Comp-Parent {
   width: 60%;
   height: 70%;
@@ -50,16 +147,28 @@ body {
   background-color: #999;
   border-radius: 15px;
 }
+.searchBar-input {
+  width: 60%;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  background-color: #ffffff42;
+  outline: none;
+  padding: 0px 15px;
+  font-family: "iranYekan";
+  font-size: 16px;
+}
 .Home-Pge-MainDIV {
-  width: 1500px;
-  height: 1000px;
-  background-color: antiquewhite;
+  width: 100%;
+  // height: 1000px;
+  background-color: rgb(255, 255, 255);
   margin: 0px auto 0px;
 }
 .Home-Pge-MainDIV-StoryParent {
   display: flex;
   gap: 30px;
   justify-content: center;
+  margin: 15px 0px;
 }
 // .Story-Comp {
 //   width: 70%;
@@ -86,14 +195,23 @@ body {
 .default-nav:first-of-type {
   display: none !important;
 }
+.Home-Pge-MainDIV-bnr {
+  width: 99%;
+  margin: 0px auto;
+  border-radius: 25px;
+  box-shadow: #000000d1 0px 46px 35px -30px;
+}
+
 .Home-Pge-MainDIV-product {
   background-color: black;
   height: 610px;
   margin-top: 3%;
   .Home-Pge-MainDIV-product-title {
+    padding-top: 3%;
     h3 {
       color: white;
       font-size: 28px;
+      margin: 0px;
     }
   }
 }
@@ -105,10 +223,218 @@ body {
 //   transform: translate3d(42px, 0px, -135px);
 // }
 .react-multi-carousel-item {
-  width: 270px !important;
+  width: 245px !important;
 }
 .Most-sales-Product-carousel {
+  color: black;
+  background-color: white;
+  margin: 0px 8px;
+  padding: 15px 5px;
+  border-radius: 25px;
+}
+.react-multi-carousel-list {
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  position: relative;
+  height: 70%;
+  .react-multiple-carousel__arrow--left {
+    display: none !important;
+    // left: calc(30% + 1px) !important;
+    // top: calc(0%) !important;
+    // background-color: #fb0557 !important;
+    // border-radius: 15px !important;
+  }
+  .react-multiple-carousel__arrow--right {
+    display: none !important;
+    // right: calc(30% + 1px) !important;
+    // top: calc(0%) !important;
+    // background-color: #fb0557 !important;
+    // border-radius: 15px !important;
+    // /* color: black; */
+  }
+}
+
+.Most-sales-Product-price {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Most-sales-Product-price-btn {
+  background-color: black;
   color: white;
-  background-color: #999;
-  margin-right: 3px;
+  padding: 0px 10px;
+  height: 45px;
+  border-radius: 15px;
+}
+.Home-Pge-MainDIV-Advertising-banner {
+  display: flex;
+  width: 60%;
+  margin: 0px auto;
+  padding: 25px 0px;
+  img {
+    width: 90%;
+    border-radius: 15px;
+  }
+}
+.Home-Pge-MainDIV-product-lst {
+  width: 70%;
+  padding: 20px;
+  margin: 0px auto;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: #0000003b 0px 0px 11px 3px;
+}
+.Home-Pge-MainDIV-product-lst-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 25px;
+}
+.Home-Pge-MainDIV-product-lst-title-h5 {
+  color: red;
+}
+.Home-Pge-MainDIV-product-lst-itms {
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  justify-content: space-between;
+}
+.Home-Pge-MainDIV-product-lst-itm {
+  display: flex;
+  border-bottom: 1px #d9d9d9 solid;
+  padding: 20px 0px;
+  img {
+    width: 75%;
+    width: 28%;
+  }
+  span {
+    font-size: 45px;
+    margin: 0px 10px;
+    color: red;
+  }
+  p {
+    font-size: 16px;
+    color: #585858;
+    font-weight: 600;
+  }
+}
+.Home-Pge-MainDIV-Brands {
+  background-color: black;
+  padding: 5px 0px 50px;
+  margin: 30px 0px;
+  color: aliceblue;
+  .Home-Pge-MainDIV-Brands-title-h3 {
+    font-size: 32px;
+  }
+  .Home-Pge-MainDIV-Brands-itm {
+    width: 70%;
+    margin: auto;
+    // .Home-Pge-MainDIV-Brands-itm1 {
+    //   // background-color: white;
+    //   // width: 60%;
+    //   // border-radius: 15px;
+    // }
+    img {
+      background-color: white;
+      padding: 15px 10px;
+      border-radius: 15px;
+    }
+  }
+}
+
+.Home-Pge-MainDIV-newsletter {
+  background-image: url("https://babkala.shop/wp-content/uploads/newsletter.svg");
+  background-repeat: no-repeat;
+  background-color: #fafafa;
+  width: 70%;
+  border-radius: 25px;
+  margin: auto;
+  padding: 75px 0px;
+
+  .Home-Pge-MainDIV-newsletter-title-h3 {
+    font-size: 32px;
+    color: #4d4d4d;
+  }
+
+  .Home-Pge-MainDIV-newsletter-itm-input {
+    padding: 15px 30px;
+    border: none;
+    border-bottom: 1px solid;
+    background-color: transparent;
+    width: 32%;
+    font-family: "iranYekan";
+    font-size: 19px;
+    outline: none;
+  }
+  .Home-Pge-MainDIV-newsletter-itm-btn {
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid;
+    background-color: transparent;
+    font-family: "iranYekan";
+    font-size: 19px;
+  }
+}
+.mainDIV-loginForm {
+  background-color: black;
+  // width: 90%;
+  margin: auto;
+  border-radius: 25px;
+  padding: 2%;
+  img {
+    width: 40%;
+    // margin: 5%;
+  }
+  .mainDIV-loginForm-title {
+    color: white;
+    text-align: right;
+  }
+  input[type="text"] {
+    width: 97%;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #838383;
+    font-size: 18px;
+    color: white;
+    padding: 0px 8px;
+    margin: 15px 0px;
+  }
+  .mainDIV-loginForm-input {
+    color: white;
+    text-align: right;
+    font-size: 18px;
+  }
+  .mainDIV-loginForm {
+    width: 100%;
+    font-size: 20px;
+    padding: 13px;
+    border-radius: 15px;
+    background-color: #c9c9c9;
+    margin: 5% 0px;
+    font-family: "iranYekan";
+  }
+  .mainDIV-loginForm:hover {
+    box-shadow: red 0px 0px 55px 4px;
+    transition: 1s;
+  }
+  a {
+    color: white;
+    text-align: right;
+    font-size: 19px;
+  }
+}
+.Dialog-Comp-MainButton-H4-label {
+  font-family: "iranYekan";
+  padding: 0px;
+  margin: 0px;
+  display: inline;
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.footer {
+  background-color: #262626;
+  width: 100%;
+  height: 200px;
 }
